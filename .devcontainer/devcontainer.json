@@ -1,16 +1,37 @@
 {
   "name": "Saab Dynamics hackathon",
   "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "hostRequirements": { "cpus": 4, "memory": "16gb", "storage": "32gb" },
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "16gb",
+    "storage": "32gb"
+  },
   "features": {
-    "ghcr.io/devcontainers/features/python:1": { "version": "3.12" },
-    "ghcr.io/devcontainers/features/node:1": { "version": "22" },
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.12"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "22"
+    },
     "ghcr.io/devcontainers/features/azure-cli:1": {}
   },
   "customizations": {
     "vscode": {
-      "extensions": ["GitHub.copilot", "GitHub.copilot-chat", "ms-python.python"]
+      "extensions": [
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "ms-python.python"
+      ]
     }
   },
-  "postCreateCommand": "echo 'Hackathon codespace ready'"
+  "postCreateCommand": "echo 'Hackathon codespace ready'",
+  "containerEnv": {
+    "OPENROUTER_BASE_URL": "https://openrouter.ai/api/v1"
+  },
+  "secrets": {
+    "OPENROUTER_API_KEY": {
+      "description": "Your team's OpenRouter key, from the team page in app.2hero.dev. Set it as a Codespaces secret for this repository; never commit it.",
+      "documentationUrl": "https://openrouter.ai/docs"
+    }
+  }
 }
