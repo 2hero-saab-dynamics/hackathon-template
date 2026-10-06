@@ -12,4 +12,5 @@ key is already in your Codespace as `OPENROUTER_API_KEY`: the organisers set it 
 secret on this repository, so it is in the environment and never in the code, and nobody has
 to copy it anywhere. Ask in the support channel if it is missing or spent. Pick a model slug from openrouter.ai/models, for
 example `openai/gpt-5.4`, `openai/gpt-5.4-mini`, `openai/gpt-6-astra`, `openai/gpt-5.3-codex`,
-`openai/text-embedding-3-large`, or the open-weight `openai/gpt-oss-120b`.
+`openai/text-embedding-3-large`. Build with today's frontier models; on-premises
+equivalents follow, so there is no local or open-weight model in this environment.
