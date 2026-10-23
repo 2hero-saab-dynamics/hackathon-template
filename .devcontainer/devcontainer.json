@@ -6,15 +6,6 @@
     "memory": "16gb",
     "storage": "32gb"
   },
-  "features": {
-    "ghcr.io/devcontainers/features/python:1": {
-      "version": "3.12"
-    },
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "22"
-    },
-    "ghcr.io/devcontainers/features/azure-cli:1": {}
-  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -24,14 +15,8 @@
       ]
     }
   },
-  "postCreateCommand": "echo 'Hackathon codespace ready'",
+  "postCreateCommand": "curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash && sudo apt-get install -y poppler-utils && echo '\u2713 Hackathon codespace ready'",
   "containerEnv": {
     "OPENROUTER_BASE_URL": "https://openrouter.ai/api/v1"
-  },
-  "secrets": {
-    "OPENROUTER_API_KEY": {
-      "description": "Your team's OpenRouter key. The organisers set it as a Codespaces secret on this repository; never commit it.",
-      "documentationUrl": "https://openrouter.ai/docs"
-    }
   }
 }
